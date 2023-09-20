@@ -1,8 +1,27 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Posts } from '../../../Slices/PostSlice'
+/**
+ * PostSlice.ts
+  export const Posts: any = createAsyncThunk('posts/fetch', async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const data = await response.json();
+    return data;
+  })
+ */
 import { IncrementAction, DecrementAction } from '../../../Slices/FrameObject'
 const Frame = () => {
     const Dispatch = useDispatch();
+    /** 
+     *  FrameObject.ts
+     *  const FrameObject = createSlice({
+            name: "FrameObject",
+            initialState: { value: 0 },
+            reducers: {
+                Increment, Decrement
+            }
+        }) 
+    */
     const Value = useSelector((state: any) => state.FrameObject.value);
     return (
         <>
