@@ -22,7 +22,12 @@ const Frame = () => {
             }
         }) 
     */
-    const Value = useSelector((state: any) => state.FrameObject.value);
+    const Value = useSelector((state: any) => state.FrameObject.value); 
+    /**
+     * useSelector(({ PostSlice<store.ts>: { PostList<initialState at PostSlice.ts> } }) => PostList<PostList[]>)
+     */
+    const PostList = useSelector(({ PostSlice: { PostList } }) => PostList)
+    console.log('THIS IS POSTLIST:', PostList)
     useEffect(() => {
         /** Don't Write Like Posts , You Must Write Posts() , Prantesis are so important */
         Dispatch(Posts())
