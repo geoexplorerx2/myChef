@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Posts } from '../../../Slices/PostSlice'
 /**
@@ -23,6 +23,10 @@ const Frame = () => {
         }) 
     */
     const Value = useSelector((state: any) => state.FrameObject.value);
+    useEffect(() => {
+        /** Don't Write Like Posts , You Must Write Posts() , Prantesis are so important */
+        Dispatch(Posts())
+    }, [])
     return (
         <>
             <div className='w-full h-28 bg-slate-700 px-20 text-2xl text-white'>
