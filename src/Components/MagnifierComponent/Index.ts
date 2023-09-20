@@ -1,2 +1,3 @@
 import Frame from "./MagnifierComponentPartials/Frame"
-export const MagnifierComponentFram = Frame
+import FramePartial from "./MagnifierComponentPartials/FramePartial"
+export const MagnifierComponentFram = FramePartial
