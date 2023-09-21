@@ -1,11 +1,6 @@
-import React, { FC } from 'react'
-import CustomeSectionPhone from './CustomeSectionPhone'
-interface CustomeSectionPartial {
-    windowSize?: any
-}
-const CustomeSectionPartial: FC<CustomeSectionPartial> = ({ windowSize }) => {
-    let DocumentObjectModel = null;
-    if (windowSize <= 375) { DocumentObjectModel = <CustomeSectionPhone /> }
+import React from 'react'
+
+const Index = () => {
     return (
         <section className='w-full'>
             <div className='w-full flex justify-center pt-5 text-2xl font-semibold'>
@@ -80,4 +75,4 @@ const CustomeSectionPartial: FC<CustomeSectionPartial> = ({ windowSize }) => {
     )
 }
 
-export default CustomeSectionPartial
+export default Index

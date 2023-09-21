@@ -1,2 +1,0 @@
-import CustomeSectionPartial from "./CustomeSectionComponentPartials/CustomeSectionPartial"
-export const CustomeSectionComponent = CustomeSectionPartial 
