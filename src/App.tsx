@@ -12,11 +12,15 @@ function App() {
     <Provider store={Store}>
       <main className="w-full min-h-screen relative">
         <NavBarComponent windowSize={width} />
-        <CustomeSectionComponent windowSize={width}/>
-        {/* <MagnifierComponentFram
-          width={"500px"}
-          src="https://chefworks.liquifire.com/chefworks?set=previewSize[large],scaleFactor[3],prodID[JLCV],prodColor[BLU],prodView[front],textPosition[],flag1[],flag1Position[],flag2[],flag2Position[],seed[001]&call=url[file:main]&sink=format[jpg]"
-        /> */}
+        <CustomeSectionComponent windowSize={width} />
+        <div className='w-full flex justify-center'>
+          <div className='w-[90%] border-2 mt-20 rounded-2xl p-5'>
+            <MagnifierComponentFram
+              width={"100%"}
+              src="https://chefworks.liquifire.com/chefworks?set=previewSize[large],scaleFactor[3],prodID[JLCV],prodColor[BLU],prodView[front],textPosition[],flag1[],flag1Position[],flag2[],flag2Position[],seed[001]&call=url[file:main]&sink=format[jpg]"
+            />
+          </div>
+        </div>
       </main>
     </Provider>
   );
