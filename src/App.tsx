@@ -5,10 +5,6 @@ import useWindowSize from './Hooks/useWindowSize';
 import NavBar from './Components/NavBarComp/Index';
 import CustomeSection from './Components/CustomeSectionComp/Index';
 import MagnifierComp from './Components/MagnifierComp/Index';
-import { MagnifierComponentFram } from './Components/MagnifierComponent/Index';
-import NavBarPhone from './Components/NavBarComponent/NavBarComponentPartials/NavBarPhone';
-import CustomeSectionPartial from './Components/CustomeSectionComponet/CustomeSectionComponentPartials/CustomeSectionPartial';
-import { CustomeSectionComponent } from './Components/CustomeSectionComponet';
 function App() {
   /** Destructure the values returned by the 'useWindowSize()' hook into 'width' and 'height' variables. */
   const { width, height } = useWindowSize()
