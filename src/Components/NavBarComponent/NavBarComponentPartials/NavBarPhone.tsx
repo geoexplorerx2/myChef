@@ -5,7 +5,7 @@ import Logo from '../../../assets/png/logo.png'
 import Counter from '../../../assets/svg/counter.svg'
 const NavBarPhone = () => {
   return (
-    <div className='w-full h-[75px] bg-white flex items-center'>
+    <div className='w-full h-[75px] bg-white flex items-center shodow-Box'>
       <div className='w-[20%] px-5 flex items-center'>
         <img className='w-[60%]' src={Menu} />
       </div>

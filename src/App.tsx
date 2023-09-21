@@ -9,7 +9,7 @@ function App() {
   const { width, height } = useWindowSize()
   return (
     <Provider store={Store}>
-      <main className="w-full min-h-screen bg-slate-800 relative">
+      <main className="w-full min-h-screen relative">
         <NavBarComponent windowSize={width} />
         {/* <MagnifierComponentFram
           width={"500px"}
