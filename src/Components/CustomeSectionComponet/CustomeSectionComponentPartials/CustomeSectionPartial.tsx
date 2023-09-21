@@ -21,7 +21,7 @@ const CustomeSectionPartial: FC<CustomeSectionPartial> = ({ windowSize }) => {
             </div>
             <div className='w-full'>
                 <div className='w-full mt-8 flex justify-center'>
-                    <div className='w-[90%] flex'>
+                    <div className='w-[87%] flex'>
                         <div className='flex w-full translate-x-[25px]'>
                             {/* ---------------------------------------------------------------------------- */}
                             <div className='w-[10%] relative'>
