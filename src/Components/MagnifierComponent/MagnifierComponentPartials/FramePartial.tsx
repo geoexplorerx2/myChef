@@ -4,8 +4,8 @@ const FramePartial = ({
   src,
   width,
   height,
-  magnifierHeight = 100,
-  magnifieWidth = 100,
+  magnifierHeight = 200,
+  magnifieWidth = 200,
   zoomLevel = 1.5
 }: {
   src: string;
