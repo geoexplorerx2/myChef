@@ -8,7 +8,7 @@ function App() {
   const { width, height } = useWindowSize()
   return (
     <Provider store={Store}>
-      <main className="w-full min-h-screen bg-slate-800">
+      <main className="w-full min-h-screen bg-slate-800 relative">
         <MagnifierComponentFram />
       </main>
     </Provider>
