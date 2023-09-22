@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Store from './store';
 import { Provider } from 'react-redux';
 import useWindowSize from './Hooks/useWindowSize';
@@ -7,11 +7,24 @@ import CustomeSection from './Components/CustomeSectionComp/Index';
 import MagnifierComp from './Components/MagnifierComp/Index';
 import ProgressComp from './Components/ProgressSectionComp/Index';
 import Page1 from './Pages/Page1';
+import Page2 from './Pages/Page2';
 function App() {
   /** Destructure the values returned by the 'useWindowSize()' hook into 'width' and 'height' variables. */
   const { width, height } = useWindowSize()
   const [page, setPage] = useState<number>(1)
   const [template, setTemplate] = useState<any>(<Page1 />)
+  useEffect(() => {
+    switch (page) {
+      case 1:
+        setTemplate(<Page1 />)
+        break;
+      case 2:
+        setTemplate(<Page2 />)
+        break;
+      default:
+        setTemplate(<Page1 />)
+    }
+  }, [page])
   return (
     <Provider store={Store}>
       {/* <Frame/> */}
