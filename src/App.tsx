@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Store from './store';
 import { Provider } from 'react-redux';
 import useWindowSize from './Hooks/useWindowSize';
@@ -6,14 +6,12 @@ import NavBar from './Components/NavBarComp/Index';
 import CustomeSection from './Components/CustomeSectionComp/Index';
 import MagnifierComp from './Components/MagnifierComp/Index';
 import ProgressComp from './Components/ProgressSectionComp/Index';
-import NameComp from './Components/NameSectionComp/Index';
-import PositionComp from './Components/PositionSectionComp/Index';
-import FontComp from './Components/FontSectionComp/Index';
-import ColorComp from './Components/ColorSectionComp/Index';
-import SaveButton from './Components/SaveSectionComp/Index';
+import Page1 from './Pages/Page1';
 function App() {
   /** Destructure the values returned by the 'useWindowSize()' hook into 'width' and 'height' variables. */
   const { width, height } = useWindowSize()
+  const [page, setPage] = useState<number>(1)
+  const [template, setTemplate] = useState<any>(<Page1 />)
   return (
     <Provider store={Store}>
       {/* <Frame/> */}
@@ -38,19 +36,7 @@ function App() {
           </div>
         </section>
         <div className='w-full'>
-          <NameComp />
-        </div>
-        <div className='w-full'>
-          <PositionComp />
-        </div>
-        <div className='w-full'>
-          <FontComp />
-        </div>
-        <div className='w-full'>
-          <ColorComp />
-        </div>
-        <div>
-          <SaveButton />
+          {template}
         </div>
       </main>
     </Provider>
