@@ -17,7 +17,7 @@ const Index = () => {
                     </span>
                 </button>
             </div>
-            <div className='w-full px-7 flex justify-center items-center mt-1 mb-10'>
+            <div className='w-full px-7 flex justify-center items-center mt-1 mb-6'>
                 <button className='w-[49%] border-[1px] border-[#586E8E83] mr-3 rounded-lg bg-[#AF8B681A] flex justify-center py-3'>
                     <span className='mx-2'>Your Name</span>
                 </button>

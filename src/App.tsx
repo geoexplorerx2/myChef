@@ -9,6 +9,7 @@ import ProgressComp from './Components/ProgressSectionComp/Index';
 import NameComp from './Components/NameSectionComp/Index';
 import PositionComp from './Components/PositionSectionComp/Index';
 import FontComp from './Components/FontSectionComp/Index';
+import ColorComp from './Components/ColorSectionComp/Index';
 function App() {
   /** Destructure the values returned by the 'useWindowSize()' hook into 'width' and 'height' variables. */
   const { width, height } = useWindowSize()
@@ -43,6 +44,9 @@ function App() {
         </div>
         <div className='w-full'>
           <FontComp />
+        </div>
+        <div className='w-full'>
+          <ColorComp />
         </div>
       </main>
     </Provider>
