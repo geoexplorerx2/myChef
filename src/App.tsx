@@ -7,6 +7,7 @@ import CustomeSection from './Components/CustomeSectionComp/Index';
 import MagnifierComp from './Components/MagnifierComp/Index';
 import ProgressComp from './Components/ProgressSectionComp/Index';
 import NameComp from './Components/NameSectionComp/Index';
+import PositionComp from './Components/PositionSectionComp/Index';
 function App() {
   /** Destructure the values returned by the 'useWindowSize()' hook into 'width' and 'height' variables. */
   const { width, height } = useWindowSize()
@@ -37,7 +38,7 @@ function App() {
           <NameComp />
         </div>
         <div className='w-full'>
-
+          <PositionComp/>
         </div>
       </main>
     </Provider>
