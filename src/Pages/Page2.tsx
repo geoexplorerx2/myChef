@@ -7,7 +7,7 @@ const Page2 = () => {
     return (
         <div className='w-full'>
             <div className='w-full'>
-                <Logo />
+                <Logo LogoName={'Logo / Marka Yükle'}/>
             </div>
             <div className='w-full'>
                 <UploadComp />
