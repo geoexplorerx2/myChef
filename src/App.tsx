@@ -12,7 +12,7 @@ import Page3 from './Pages/Page3';
 function App() {
   /** Destructure the values returned by the 'useWindowSize()' hook into 'width' and 'height' variables. */
   const { width, height } = useWindowSize()
-  const [page, setPage] = useState<number>(1)
+  const [page, setPage] = useState<number>(2)
   const [template, setTemplate] = useState<any>(<Page1 />)
   useEffect(() => {
     switch (page) {
@@ -35,7 +35,7 @@ function App() {
       <main className="w-full min-h-screen relative bg-white">
         <NavBar />
         <CustomeSection />
-        <section className='sticky top-0 w-full bg-white'>
+        <section className='sticky top-0 w-full bg-white z-50'>
           <div className='w-full relative'>
             <div className='sticky top-0'>
               <div className='w-full pt-1'>
