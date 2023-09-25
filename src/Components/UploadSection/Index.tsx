@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Uploaded from './Uploaded';
 import Upload from './Upload';
 const Index = () => {
-   const [uploadStatus, setUploadStatus] = useState<any>(true)
+   const [uploadStatus, setUploadStatus] = useState<any>(false)
    let DocumentObjectModel = null;
    if (uploadStatus) {
       DocumentObjectModel = <Uploaded />

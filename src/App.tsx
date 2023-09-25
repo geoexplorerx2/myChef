@@ -8,10 +8,11 @@ import MagnifierComp from './Components/MagnifierComp/Index';
 import ProgressComp from './Components/ProgressSectionComp/Index';
 import Page1 from './Pages/Page1';
 import Page2 from './Pages/Page2';
+import Page3 from './Pages/Page3';
 function App() {
   /** Destructure the values returned by the 'useWindowSize()' hook into 'width' and 'height' variables. */
   const { width, height } = useWindowSize()
-  const [page, setPage] = useState<number>(2)
+  const [page, setPage] = useState<number>(3)
   const [template, setTemplate] = useState<any>(<Page1 />)
   useEffect(() => {
     switch (page) {
@@ -20,6 +21,9 @@ function App() {
         break;
       case 2:
         setTemplate(<Page2 />)
+        break;
+      case 3:
+        setTemplate(<Page3 />)
         break;
       default:
         setTemplate(<Page1 />)

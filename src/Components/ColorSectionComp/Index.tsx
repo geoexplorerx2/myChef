@@ -1,5 +1,5 @@
 import React from 'react'
-
+import whiteTick from '../../assets/svg/whiteCheck.svg'
 const Index = () => {
     return (
         <div className='w-full'>
@@ -22,8 +22,8 @@ const Index = () => {
                         <div className='w-[35px] h-[35px] rounded-full bg-[#EF54D1]'>
 
                         </div>
-                        <div className='w-[35px] h-[35px] rounded-full bg-[#333333]'>
-
+                        <div className='w-[35px] h-[35px] rounded-full bg-[#333333] flex justify-center items-center'>
+                          <img className='w-[40%]' src={whiteTick}/>
                         </div>
                         <div className='w-[35px] h-[35px] rounded-full bg-[#ffffff] border-[1px] border-[#E3E3E3]'>
 
