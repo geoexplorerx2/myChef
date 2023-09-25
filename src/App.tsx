@@ -12,7 +12,7 @@ import Page3 from './Pages/Page3';
 function App() {
   /** Destructure the values returned by the 'useWindowSize()' hook into 'width' and 'height' variables. */
   const { width, height } = useWindowSize()
-  const [page, setPage] = useState<number>(3)
+  const [page, setPage] = useState<number>(1)
   const [template, setTemplate] = useState<any>(<Page1 />)
   useEffect(() => {
     switch (page) {

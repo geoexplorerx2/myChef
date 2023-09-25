@@ -5,8 +5,8 @@
 /* Style Customization */
 .shodow-Box {
     -webkit-box-shadow: 0px 18px 30px -13px #00000014;
-    box-shadow: 0px 30px 30px -13px #00000014;
-    /* opacity: 0.8; */
+    box-shadow: 0px 18px 30px -13px #00000014;
+    opacity: 0.8;
 }
 
 .shodow-Box-color-box {
