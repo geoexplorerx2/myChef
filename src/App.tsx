@@ -9,10 +9,11 @@ import ProgressComp from './Components/ProgressSectionComp/Index';
 import Page1 from './Pages/Page1';
 import Page2 from './Pages/Page2';
 import Page3 from './Pages/Page3';
+import Page4 from './Pages/Page4';
 function App() {
   /** Destructure the values returned by the 'useWindowSize()' hook into 'width' and 'height' variables. */
   const { width, height } = useWindowSize()
-  const [page, setPage] = useState<number>(3)
+  const [page, setPage] = useState<number>(4)
   const [template, setTemplate] = useState<any>(<Page1 />)
   useEffect(() => {
     switch (page) {
@@ -24,6 +25,9 @@ function App() {
         break;
       case 3:
         setTemplate(<Page3 />)
+        break;
+      case 4:
+        setTemplate(<Page4 />)
         break;
       default:
         setTemplate(<Page1 />)
