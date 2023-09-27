@@ -1,6 +1,8 @@
 import React from 'react'
 import Logo from '../Components/LogoUploadComp/Index'
 import Counts from '../Components/Counts/Index'
+import PaymentInfo from '../Components/PaymentFeature/Index'
+import Sum from '../Components/SumComponent/Index'
 import SaveBtn from '../Components/SaveSectionComp/Index'
 const Page4 = () => {
   return (
@@ -10,6 +12,12 @@ const Page4 = () => {
       </div>
       <div className='w-full bg-white'>
         <Counts />
+      </div>
+      <div className='w-full bg-white'>
+        <PaymentInfo />
+      </div>
+      <div className='w-full bg-white'>
+        <Sum />
       </div>
       <div className='w-full'>
         <SaveBtn />
