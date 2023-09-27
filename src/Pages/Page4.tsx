@@ -3,7 +3,7 @@ import Logo from '../Components/LogoUploadComp/Index'
 import Counts from '../Components/Counts/Index'
 import PaymentInfo from '../Components/PaymentFeature/Index'
 import Sum from '../Components/SumComponent/Index'
-import SaveBtn from '../Components/SaveSectionComp/Index'
+import AddToBasket from '../Components/AddToBasketComp/Index'
 const Page4 = () => {
   return (
     <div className='w-full'>
@@ -20,7 +20,7 @@ const Page4 = () => {
         <Sum />
       </div>
       <div className='w-full'>
-        <SaveBtn />
+        <AddToBasket />
       </div>
     </div>
   )
