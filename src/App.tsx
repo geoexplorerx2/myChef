@@ -39,14 +39,14 @@ function App() {
       <main className="w-full min-h-screen relative bg-white">
         <NavBar />
         <CustomeSection />
+        <div className='w-full pt-1'>
+          <ProgressComp />
+        </div>
         <section className='sticky top-0 w-full bg-white z-50'>
           <div className='w-full relative'>
             <div className='sticky top-0'>
-              <div className='w-full pt-1'>
-                <ProgressComp />
-              </div>
               <div className='w-full flex justify-center'>
-                <div className='w-[90%] border-2 mt-14 rounded-2xl p-1'>
+                <div className='w-[80%] mt-8 rounded-2xl'>
                   <MagnifierComp
                     width={"100%"}
                     src="https://chefworks.liquifire.com/chefworks?set=previewSize[large],scaleFactor[3],prodID[JLCV],prodColor[BLU],prodView[front],textPosition[],flag1[],flag1Position[],flag2[],flag2Position[],seed[001]&call=url[file:main]&sink=format[jpg]"

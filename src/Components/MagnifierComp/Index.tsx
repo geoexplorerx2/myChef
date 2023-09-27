@@ -52,13 +52,14 @@ const Index = ({
                 }}
             >
                 <img src={src} alt={"img"} />
-                <div className='absolute top-[120px] left-[180px] text-xs font-bold text-[#fff] z-30'>
-                    Name
+                <div
+                 className='absolute top-[120px] left-[170px] text-xs font-bold text-[#fff] z-50'>
+                    Mehmet
                 </div>
             </div>
 
 
-            <div
+            {/* <div
                 style={{
                     display: showMagnifier ? "" : "none",
                     position: "absolute",
@@ -85,7 +86,7 @@ const Index = ({
                     backgroundPositionX: `${-x * zoomLevel + magnifieWidth / 2}px`,
                     backgroundPositionY: `${-y * zoomLevel + magnifierHeight / 2}px`
                 }}
-            ></div>
+            ></div> */}
         </div>
     );
 }
