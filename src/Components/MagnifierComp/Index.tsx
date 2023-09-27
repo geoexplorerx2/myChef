@@ -26,8 +26,8 @@ const Index = ({
                 width: width
             }}
         >
-            <img
-                src={src}
+            <div
+                className='relative'
                 style={{ height: height, width: width }}
                 onMouseEnter={(e) => {
                     // update image size and turn-on magnifier
@@ -50,8 +50,13 @@ const Index = ({
                     // close magnifier
                     setShowMagnifier(false);
                 }}
-                alt={"img"}
-            />
+            >
+                <img src={src} alt={"img"} />
+                <div className='absolute top-[120px] left-[180px] text-xs font-bold text-[#fff] z-30'>
+                    Name
+                </div>
+            </div>
+
 
             <div
                 style={{
