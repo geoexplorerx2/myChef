@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import whiteTick from '../../assets/svg/whiteCheck.svg'
 import { useDispatch } from 'react-redux'
+import { setColorAction } from '../../Slices/InfoSlice'
 const Index = () => {
     const dispatch = useDispatch()
     const [elem, setElem] = useState('#333333')
-    const [textColor, setTextColor] = useState('text-[#333333]')
+    const [textColor, setTextColor] = useState('#333333')
     const elements = [
         {
             color: 'bg-[#1694BA]',
@@ -35,9 +36,8 @@ const Index = () => {
     const handleColor = (color: any) => {
         setElem(color.data)
         setTextColor(color.data)
+        dispatch(setColorAction(color.data))
     }
-    console.log(textColor)
-
     return (
         <div className='w-full'>
             <div className='px-7 text-base font-semibold pb-1'>Renk</div>
