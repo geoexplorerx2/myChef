@@ -2,13 +2,19 @@ import { createSlice } from '@reduxjs/toolkit';
 const setInfo = (State: any, action: any) => {
   return {
     ...State,
-    name: action, // Assuming that the color value is in the payload property of the action
+    name: action,
   };
 }
 const setColor = (State: any, action: any) => {
   return {
     ...State,
-    color: action, // Assuming that the color value is in the payload property of the action
+    color: action,
+  };
+}
+const setDirection = (State: any, action: any) => {
+  return {
+    ...State,
+    dir: action,
   };
 }
 const InfoSlice = createSlice({
@@ -16,12 +22,18 @@ const InfoSlice = createSlice({
   initialState: {
     name: '',
     color: '#000000',
+    dir: false
   },
   reducers: {
     setInfo,
     setColor,
+    setDirection,
   }
 })
 
-export const { setInfo: setInfoAction, setColor: setColorAction } = InfoSlice.actions;
+export const {
+  setInfo: setInfoAction,
+  setColor: setColorAction,
+  setDirection: setDirectionAction,
+} = InfoSlice.actions;
 export default InfoSlice.reducer;
