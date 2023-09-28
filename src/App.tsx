@@ -6,6 +6,7 @@ import NavBar from './Components/NavBarComp/Index';
 import CustomeSection from './Components/CustomeSectionComp/Index';
 import MagnifierComp from './Components/MagnifierComp/Index';
 import ProgressComp from './Components/ProgressSectionComp/Index';
+import MarkLogo from './assets/png/MarkGroup.png'
 import Page1 from './Pages/Page1';
 import Page2 from './Pages/Page2';
 import Page3 from './Pages/Page3';
@@ -49,7 +50,7 @@ function App() {
                 <div className='w-[80%] mt-8 rounded-2xl'>
                   <MagnifierComp
                     width={"100%"}
-                    src="https://chefworks.liquifire.com/chefworks?set=previewSize[large],scaleFactor[3],prodID[JLCV],prodColor[BLU],prodView[front],textPosition[],flag1[],flag1Position[],flag2[],flag2Position[],seed[001]&call=url[file:main]&sink=format[jpg]"
+                    src={MarkLogo}
                   />
                 </div>
               </div>
