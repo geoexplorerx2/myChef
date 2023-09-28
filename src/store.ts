@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import FrameObject from "./Slices/FrameObject";
 import PostSlice from "./Slices/PostSlice";
+import NameSlice from "./Slices/NameSlice";
 const Store = configureStore({
     reducer: {
         /** FrameObject is Reducer which we use it at Selectors using useSelector Hook */
@@ -17,6 +18,7 @@ const Store = configureStore({
         /** -------------------------------------------------------------------------------------------- */
         FrameObject: FrameObject,
         PostSlice: PostSlice,
+        NameSlice:NameSlice,
     }
 })
 
