@@ -1,12 +1,12 @@
 import React from 'react'
 import add from '../../assets/svg/add.svg'
 import { useDispatch } from 'react-redux';
-import { setNameAction } from '../../Slices/NameSlice';
+import { setInfoAction } from '../../Slices/InfoSlice';
 const Index = () => {
     const dispatch = useDispatch();
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const inputValue:any = event?.target.value;
-        dispatch(setNameAction(inputValue))
+        dispatch(setInfoAction(inputValue))
     };
     return (
         <div className='w-full'>

@@ -20,14 +20,14 @@ const Index = ({
   const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
   const [showMagnifier, setShowMagnifier] = useState(false);
 
-  const handleMouseEnter = useCallback((e:any) => {
+  const handleMouseEnter = useCallback((e: any) => {
     const elem = e.currentTarget;
     const { width, height } = elem.getBoundingClientRect();
     setImageSize({ width, height });
     setShowMagnifier(true);
   }, []);
 
-  const handleMouseMove = useCallback((e:any) => {
+  const handleMouseMove = useCallback((e: any) => {
     const elem = e.currentTarget;
     const { top, left } = elem.getBoundingClientRect();
     const x = e.pageX - left - window.pageXOffset;
@@ -39,7 +39,7 @@ const Index = ({
     setShowMagnifier(false);
   }, []);
 
-  const name = useSelector((state: any) => state.NameSlice.name);
+  const name = useSelector((state: any) => state.InfoSlice.name);
   const formattedName = useMemo(() => name.payload, [name]);
 
   return (
