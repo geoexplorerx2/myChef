@@ -67,7 +67,7 @@ const Index = ({
             >
                 <img src={src} alt={"img"} />
                 <div
-                    className='absolute border-[1px] border-[red] w-[50px] flex justify-start top-[120px] left-[170px] text-xs font-bold text-[#000] z-50'>
+                    className='absolute w-[50px] flex justify-start top-[120px] left-[170px] text-xs font-bold text-[#000] z-50'>
                     <span className='absolute top-0 left-0'>{Temp}</span>
                 </div>
             </div>
