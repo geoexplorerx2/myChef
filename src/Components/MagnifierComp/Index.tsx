@@ -18,20 +18,9 @@ const Index = ({
     const [[x, y], setXY] = useState([0, 0]);
     const [[imgWidth, imgHeight], setSize] = useState([0, 0]);
     const [showMagnifier, setShowMagnifier] = useState(false);
-    let Temp = ''
-    let Name = useSelector((state: any) => state.NameSlice.name)
-    const separateString = (str: any, chunkSize: any) => {
-        const chunks = [];
-        for (let i = 0; i < str?.length; i += chunkSize) {
-            chunks.push(str.substring(i, i + chunkSize));
-        }
-        return chunks;
-    };
-    Name = separateString(Name.payload, 6)
-    Name.map((item: any) => {
-        Temp = Temp + ' ' + item
-    })
-    console.log(Name)
+    let Name = (useSelector((state: any) => state.NameSlice.name))
+    console.log(Name.payload)
+
     return (
         <div
             style={{
@@ -66,9 +55,8 @@ const Index = ({
                 }}
             >
                 <img src={src} alt={"img"} />
-                <div
-                    className='absolute w-[50px] flex justify-start top-[120px] left-[170px] text-xs font-bold text-[#000] z-50'>
-                    <span className='absolute top-0 left-0'>{Temp}</span>
+                <div className="absolute w-[70px] flex justify-start top-[120px] left-[160px] text-xs font-bold text-black z-50 overflow-hidden">
+                    <span className="w-full break-all ">{Name.payload}</span>
                 </div>
             </div>
 
