@@ -14,7 +14,7 @@ const Mobile = (page: any, template: any) => {
   return (
     <>
       {/* <Frame/> */}
-      <main className="w-full min-h-screen relative bg-white max-w-[428px] border-r-2 border-[#000000]">
+      <main className="w-full min-h-screen relative bg-white max-w-[390px] border-r-2 border-[#000000]">
         <NavBar />
         <CustomeSection />
         <div className='w-full pt-1'>
