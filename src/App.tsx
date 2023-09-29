@@ -10,30 +10,7 @@ import Page2 from './Pages/Page2';
 import Page3 from './Pages/Page3';
 import Page4 from './Pages/Page4';
 import { useSelector } from 'react-redux';
-function App() {
-  const getPage = useSelector((state: any) => state.InfoSlice?.page)
-  const page = typeof getPage === 'object' ? (getPage.payload) : getPage
-  /** Destructure the values returned by the 'useWindowSize()' hook into 'width' and 'height' variables. */
-  const { width, height } = useWindowSize()
-  const [template, setTemplate] = useState<any>(<Page1 />)
-  useEffect(() => {
-    switch (page) {
-      case 1:
-        setTemplate(<Page1 />)
-        break;
-      case 2:
-        setTemplate(<Page2 />)
-        break;
-      case 3:
-        setTemplate(<Page3 />)
-        break;
-      case 4:
-        setTemplate(<Page4 />)
-        break;
-      default:
-        setTemplate(<Page1 />)
-    }
-  }, [page])
+const Mobile = (page: any, template: any) => {
   return (
     <>
       {/* <Frame/> */}
@@ -61,6 +38,36 @@ function App() {
           {template}
         </div>
       </main>
+    </>
+  )
+}
+function App() {
+  const getPage = useSelector((state: any) => state.InfoSlice?.page)
+  const page = typeof getPage === 'object' ? (getPage.payload) : getPage
+  /** Destructure the values returned by the 'useWindowSize()' hook into 'width' and 'height' variables. */
+  const { width, height } = useWindowSize()
+  const [template, setTemplate] = useState<any>(<Page1 />)
+  useEffect(() => {
+    switch (page) {
+      case 1:
+        setTemplate(<Page1 />)
+        break;
+      case 2:
+        setTemplate(<Page2 />)
+        break;
+      case 3:
+        setTemplate(<Page3 />)
+        break;
+      case 4:
+        setTemplate(<Page4 />)
+        break;
+      default:
+        setTemplate(<Page1 />)
+    }
+  }, [page])
+  return (
+    <>
+      {width <= 428 ? Mobile(page, template) : null}
     </>
   );
 }
