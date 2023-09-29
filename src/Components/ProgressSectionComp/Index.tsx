@@ -61,8 +61,11 @@ const Index = () => {
                         </div>
                         {/* ---------------------------------------------------------------------------- */}
                         <div className='w-[10%] relative'>
-                            <div className='w-[35px] h-[35px] bg-[#fff] rounded-full flex justify-center items-center border-[1px] border-[rgba(0,0,0,0.3)]'>
-                                <span className='text-sm text-black'>4</span>
+                            <div className={`w-[35px] h-[35px] ${pageValue >= 4 ? 'bg-[#4C6486]' : 'bg-[#fff]'} rounded-full flex justify-center items-center border-[1px] border-[rgba(0,0,0,0.3)]`}>
+                                {pageValue <= 4 ? <span className={`text-sm ${pageValue < 4 ? 'text-black' : 'text-white'}`}>4</span> : null}
+                                {pageValue > 4 ? <span className='w-full flex justify-center items-center'>
+                                    <img className='w-[30%]' src={WhiteTik} />
+                                </span> : null}
                             </div>
                             <div className='absolute top-0 left-0 w-full h-full flex items-end translate-y-8 translate-x-1'>
                                 <span className='text-black text-sm'>Özet</span>
