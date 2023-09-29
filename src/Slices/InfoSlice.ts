@@ -17,17 +17,25 @@ const setDirection = (State: any, action: any) => {
     dir: action,
   };
 }
+const setPage = (State: any, action: any) => {
+  return {
+    ...State,
+    page: action,
+  };
+}
 const InfoSlice = createSlice({
   name: "InfoSlice",
   initialState: {
     name: '',
     color: '#000000',
-    dir: false
+    dir: false,
+    page:1,
   },
   reducers: {
     setInfo,
     setColor,
     setDirection,
+    setPage,
   }
 })
 
@@ -35,5 +43,6 @@ export const {
   setInfo: setInfoAction,
   setColor: setColorAction,
   setDirection: setDirectionAction,
+  setPage:setPageAction
 } = InfoSlice.actions;
 export default InfoSlice.reducer;

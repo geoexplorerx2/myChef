@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Store from './store';
-import { Provider } from 'react-redux';
 import useWindowSize from './Hooks/useWindowSize';
 import NavBar from './Components/NavBarComp/Index';
 import CustomeSection from './Components/CustomeSectionComp/Index';
@@ -11,10 +9,12 @@ import Page1 from './Pages/Page1';
 import Page2 from './Pages/Page2';
 import Page3 from './Pages/Page3';
 import Page4 from './Pages/Page4';
+import { useSelector } from 'react-redux';
 function App() {
+  const getPage = useSelector((state: any) => state.InfoSlice?.page)
+  const page = typeof getPage === 'object' ? (getPage.payload) : getPage
   /** Destructure the values returned by the 'useWindowSize()' hook into 'width' and 'height' variables. */
   const { width, height } = useWindowSize()
-  const [page, setPage] = useState<number>(1)
   const [template, setTemplate] = useState<any>(<Page1 />)
   useEffect(() => {
     switch (page) {
@@ -35,7 +35,7 @@ function App() {
     }
   }, [page])
   return (
-    <Provider store={Store}>
+    <>
       {/* <Frame/> */}
       <main className="w-full min-h-screen relative bg-white">
         <NavBar />
@@ -61,7 +61,7 @@ function App() {
           {template}
         </div>
       </main>
-    </Provider>
+    </>
   );
 }
 
