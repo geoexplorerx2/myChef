@@ -69,7 +69,7 @@ const Index = ({
         </div>
       </div>
 
-      {/* <div
+      <div
         style={{
           display: showMagnifier ? '' : 'none',
           position: 'absolute',
@@ -87,7 +87,7 @@ const Index = ({
           backgroundPositionX: `${-position.x * zoomLevel + magnifieWidth / 2}px`,
           backgroundPositionY: `${-position.y * zoomLevel + magnifierHeight / 2}px`,
         }}
-      ></div> */}
+      ></div>
     </div>
   );
 };
