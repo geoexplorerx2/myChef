@@ -41,7 +41,8 @@ const Index = ({
 
   const name = useSelector((state: any) => state.InfoSlice?.name);
   const color = useSelector((state: any) => state.InfoSlice?.color);
-  
+  const dir = useSelector((state: any) => state.InfoSlice?.dir);
+  console.log('Direction::', dir.payload)
   const formattedName = useMemo(() => name.payload, [name]);
 
   return (
@@ -62,7 +63,7 @@ const Index = ({
         <img src={src} alt="img" />
         <div
           style={{ color: color.payload }}
-          className="absolute w-[70px] flex justify-start top-[120px] left-[160px] text-xs font-bold text-black z-50 overflow-hidden"
+          className={`absolute w-[60px] flex justify-start ${dir.payload===0?'top-[120px] left-[170px]':'top-[120px] left-[100px]'} text-xs font-bold text-black z-50 overflow-hidden`}
         >
           <span className="w-full break-all">{formattedName}</span>
         </div>
